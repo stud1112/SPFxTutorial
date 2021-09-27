@@ -2,21 +2,21 @@ import * as React from 'react';
 import { useContext } from 'react';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import AppContext from '../common/AppContext';
-import useStyles from './MyButtonStyles';
+import useMergeStyles from './MySecondButtonStyles';
 
-const MyButton: React.FC<{}> = () => {
+const MySecondButton: React.FC<{}> = () => {
     /* Returns the serviceScope from the "global" AppContext, which is provided by 
        <AppContext.Provider> component above and is consumed using the useContext React Hook 
     */
     const { themeVariant } = useContext(AppContext);
     const { semanticColors }: IReadonlyTheme = themeVariant;
-    const classes = useStyles(semanticColors);
+    const { MyButtonStyling } = useMergeStyles(semanticColors);    
     return (
-    <div className={classes.MyButton}
+    <div className={MyButtonStyling}
     >
-      My Button
+      My Second Button
     </div>
     );
 };
   
-export default MyButton;
+export default MySecondButton;

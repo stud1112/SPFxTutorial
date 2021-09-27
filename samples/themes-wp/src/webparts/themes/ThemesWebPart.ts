@@ -1,3 +1,4 @@
+//node: 14.17.6
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
@@ -9,8 +10,7 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import {
   ThemeProvider,
   ThemeChangedEventArgs,
-  IReadonlyTheme,
-  ISemanticColors
+  IReadonlyTheme
 } from '@microsoft/sp-component-base';
 
 import * as strings from 'ThemesWebPartStrings';

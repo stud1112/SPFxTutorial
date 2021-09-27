@@ -18,10 +18,11 @@ import { ISemanticColors } from '@microsoft/office-ui-fabric-react-bundle';
 const useStyles = createUseStyles({
     MyButton: (semanticColors: Partial<ISemanticColors>) => ({
       width: "100px",
-      borderRadius: "10px",
+      borderRadius: "5px",
       textAlign: "center",
       fontWeight: 600,
       padding: "5px",
+      margin: "3px 3px 3px",
       backgroundColor: semanticColors.primaryButtonBackground,
       color: semanticColors.primaryButtonText,
       "&:hover": {

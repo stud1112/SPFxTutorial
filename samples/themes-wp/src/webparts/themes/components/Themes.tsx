@@ -5,9 +5,13 @@ import { escape } from '@microsoft/sp-lodash-subset';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import AppContext from '../common/AppContext';
 import MyButton from './MyButton';
+import MySecondButton from './MySecondButton';
+import CustomThemedComp from './CustomThemedComp';
+import CustomStyledComp from './CustomStyledComp';
 
 const Themes: React.FC<IThemesProps> = (props) => {
   const { semanticColors }: IReadonlyTheme = props.themeVariant;
+  console.log(props.themeVariant);
   return (
     <AppContext.Provider value = {{themeVariant: props.themeVariant}}>
       <div style={{
@@ -19,6 +23,9 @@ const Themes: React.FC<IThemesProps> = (props) => {
         <span className={ styles.title }>Welcome to SharePoint!</span>
         <p className={ styles.subTitle }>This web part is theme variant aware.</p>
         <MyButton />
+        <MySecondButton />
+        <CustomThemedComp />
+        <CustomStyledComp />
       </div>
     </AppContext.Provider>
   );
