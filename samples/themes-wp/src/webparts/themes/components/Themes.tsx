@@ -8,6 +8,7 @@ import MyButton from './MyButton';
 import MySecondButton from './MySecondButton';
 import CustomThemedComp from './CustomThemedComp';
 import CustomStyledComp from './CustomStyledComp';
+import { DefaultButton } from '@fluentui/react/lib/Button'; 
 
 const Themes: React.FC<IThemesProps> = (props) => {
   const { semanticColors }: IReadonlyTheme = props.themeVariant;
@@ -26,6 +27,7 @@ const Themes: React.FC<IThemesProps> = (props) => {
         <MySecondButton />
         <CustomThemedComp />
         <CustomStyledComp />
+        <DefaultButton>I am a button.</DefaultButton>
       </div>
     </AppContext.Provider>
   );
